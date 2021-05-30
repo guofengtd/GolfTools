@@ -22,7 +22,7 @@ pod 'GolfTools'
 
 ## Author
 
-xgf, xiong.guofeng@ocloudware.com
+guofengtd@gmail.com
 
 ## License
 

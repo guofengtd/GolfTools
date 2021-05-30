@@ -24,11 +24,11 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/guofengtd/GolfTools'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'guofengtd' => 'xiong.guofeng@ocloudware.com' }
+  s.author           = { 'guofengtd' => 'guofengtd@gmail.com' }
   s.source           = { :git => 'https://github.com/guofengtd/GolfTools.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/guofengtd'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.1'
 
   s.source_files = 'Classes/**/*'
   

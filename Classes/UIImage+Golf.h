@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIImage *)imageWithColor:(UIColor *)color
                        size:(CGSize)size
-               cornerRadius:(CGFloat) cornerRadius
-                 cornerMask:(CACornerMask)cornerMask;
+                rectCorners:(UIRectCorner) rectCorners
+                cornerRadii:(CGSize)cornerRadii;
 
 @end
 

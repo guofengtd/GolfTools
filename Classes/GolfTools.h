@@ -9,6 +9,5 @@
 #define GolfTools_h
 
 #import "UIButton+Golf.h"
-#import "UIImage+Golf.h"
 
 #endif /* GolfTools_h */

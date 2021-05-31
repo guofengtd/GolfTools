@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImage+Golf.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,8 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)buttonWithTitle:(NSString *)title
                      titleColor:(UIColor *)titleColor
                 backgroundColor:(UIColor *)backgroundColor
-                   cornerRadius:(CGFloat) cornerRadius
-                     cornerMask:(CACornerMask)cornerMask;
+                    cornerRadii:(CGSize)cornerRadii;
 
 @end
 

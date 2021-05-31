@@ -13,18 +13,18 @@
 + (instancetype)buttonWithTitle:(NSString *)title
                      titleColor:(UIColor *)titleColor
                 backgroundColor:(UIColor *)backgroundColor
-                   cornerRadius:(CGFloat) cornerRadius
-                     cornerMask:(CACornerMask)cornerMask {
+                    cornerRadii:(CGSize)cornerRadii {
     UIButton *btn = [UIButton new];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:titleColor forState:UIControlStateNormal];
     
     UIImage *image = [UIImage imageWithColor:backgroundColor
-                                        size:CGSizeMake(20, 20)
-                                cornerRadius:cornerRadius
-                                  cornerMask:cornerMask];
+                                        size:CGSizeMake(cornerRadii.width * 2, cornerRadii.height * 2)
+                                 rectCorners:UIRectCornerAllCorners
+                                 cornerRadii:cornerRadii];
     
-    [btn setBackgroundImage:image forState:UIControlStateNormal];
+    [btn setBackgroundImage:[image stretchableImageWithLeftCapWidth:cornerRadii.width topCapHeight:cornerRadii.height]
+                   forState:UIControlStateNormal];
     
     return btn;
 }

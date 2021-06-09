@@ -12,8 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImage (Golf)
 
 + (UIImage *)imageWithColor:(UIColor *)color
+                borderColor:(UIColor *)borderColor
                        size:(CGSize)size
-                rectCorners:(UIRectCorner) rectCorners
+                rectCorners:(UIRectCorner)rectCorners
                 cornerRadii:(CGSize)cornerRadii;
 
 @end

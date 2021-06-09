@@ -9,5 +9,7 @@
 #define GolfTools_h
 
 #import "UIButton+Golf.h"
+#import "UIColor+Golf.h"
+#import "NSAttributedString+Golf.h"
 
 #endif /* GolfTools_h */

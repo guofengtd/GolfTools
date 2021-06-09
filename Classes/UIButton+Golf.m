@@ -13,12 +13,14 @@
 + (instancetype)buttonWithTitle:(NSString *)title
                      titleColor:(UIColor *)titleColor
                 backgroundColor:(UIColor *)backgroundColor
+                    borderColor:(UIColor *)borderColor
                     cornerRadii:(CGSize)cornerRadii {
     UIButton *btn = [UIButton new];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:titleColor forState:UIControlStateNormal];
     
-    UIImage *image = [UIImage imageWithColor:backgroundColor
+    UIImage *image = [UIImage imageWithColor:backgroundColor?:[UIColor new]
+                                 borderColor:borderColor
                                         size:CGSizeMake(cornerRadii.width * 2, cornerRadii.height * 2)
                                  rectCorners:UIRectCornerAllCorners
                                  cornerRadii:cornerRadii];

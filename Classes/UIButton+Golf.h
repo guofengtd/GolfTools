@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)buttonWithTitle:(NSString *)title
                      titleColor:(UIColor *)titleColor
                 backgroundColor:(UIColor *)backgroundColor
+                    borderColor:(UIColor *)borderColor
                     cornerRadii:(CGSize)cornerRadii;
 
 @end

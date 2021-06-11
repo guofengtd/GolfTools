@@ -10,7 +10,7 @@
 @implementation UIImage (Golf)
 
 + (UIImage *)imageWithColor:(UIColor *)color
-                borderColor:(UIColor *)borderColor
+                borderColor:(nullable UIColor *)borderColor
                        size:(CGSize)size
                 rectCorners:(UIRectCorner)rectCorners
                 cornerRadii:(CGSize)cornerRadii {

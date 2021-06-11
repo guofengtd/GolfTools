@@ -13,10 +13,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIButton (Golf)
 
 + (instancetype)buttonWithTitle:(NSString *)title
-                     titleColor:(UIColor *)titleColor
+                          color:(UIColor *)color
                 backgroundColor:(UIColor *)backgroundColor
-                    borderColor:(UIColor *)borderColor
+                    borderColor:(nullable UIColor *)borderColor
                     cornerRadii:(CGSize)cornerRadii;
+
+- (void)setTitle:(NSString *)title
+           color:(UIColor *)color
+ backgroundColor:(UIColor *)backgroundColor
+     borderColor:(nullable UIColor *)borderColor
+     cornerRadii:(CGSize)cornerRadii;
 
 @end
 

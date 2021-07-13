@@ -14,13 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)buttonWithTitle:(NSString *)title
                           color:(UIColor *)color
-                backgroundColor:(UIColor *)backgroundColor
+                backgroundColor:(nullable UIColor *)backgroundColor
                     borderColor:(nullable UIColor *)borderColor
                     cornerRadii:(CGSize)cornerRadii;
 
 - (void)setTitle:(NSString *)title
            color:(UIColor *)color
- backgroundColor:(UIColor *)backgroundColor
+ backgroundColor:(nullable UIColor *)backgroundColor
      borderColor:(nullable UIColor *)borderColor
      cornerRadii:(CGSize)cornerRadii;
 

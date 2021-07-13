@@ -8,8 +8,12 @@
 #ifndef GolfTools_h
 #define GolfTools_h
 
+#import "UIAlertController+Golf.h"
 #import "UIButton+Golf.h"
 #import "UIColor+Golf.h"
 #import "NSAttributedString+Golf.h"
+#import "NSString+Golf.h"
+
 
 #endif /* GolfTools_h */
+

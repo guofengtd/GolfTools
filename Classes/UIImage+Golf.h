@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIImage *)imageRoundedByCorners:(UIRectCorner)rectCorners
                        cornerRadii:(CGSize)cornerRadii;
 
+- (UIImage *)imageMaskedWithColor:(UIColor *)color;
+
 @end
 
 NS_ASSUME_NONNULL_END

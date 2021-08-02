@@ -11,7 +11,10 @@
 #import "UIAlertController+Golf.h"
 #import "UIButton+Golf.h"
 #import "UIColor+Golf.h"
+#import "UIView+Golf.h"
+
 #import "NSAttributedString+Golf.h"
+#import "NSData+Golf.h"
 #import "NSString+Golf.h"
 
 

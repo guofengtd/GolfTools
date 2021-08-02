@@ -18,8 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)saveToken:(NSString *)token;
 
 + (NSString *)username;
-
 + (void)saveUsername:(NSString *)username;
+
++ (BOOL)conversationTextMode;
++ (void)saveConversationTextMode:(BOOL)textMode;
 
 @end
 

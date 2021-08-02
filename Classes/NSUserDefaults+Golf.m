@@ -49,4 +49,15 @@
     [[self defaults] setObject:username?:@"" forKey:ACCOUNT_LOGIN_USERNAME_KEY];
 }
 
+#define CONVERSATION_TEXT_MODE_KEY  @"conversation.text.mode.key"
+
++ (BOOL)conversationTextMode {
+    NSNumber *number = [[self defaults] objectForKey:CONVERSATION_TEXT_MODE_KEY];
+    return number?number.boolValue:TRUE;
+}
+
++ (void)saveConversationTextMode:(BOOL)textMode {
+    [[self defaults] setObject:@(textMode) forKey:CONVERSATION_TEXT_MODE_KEY];
+}
+
 @end

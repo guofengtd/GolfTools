@@ -20,10 +20,7 @@
 + (NSAttributedString *)attributedStringWithString:(NSString *)string
                                              color:(UIColor *)color
                                               font:(UIFont *)font
-                                         alignment:(NSTextAlignment)alignment {
-    NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
-    style.alignment = alignment;
-    
+                                             style:(NSParagraphStyle *)style {
     return [[NSAttributedString alloc] initWithString:string
                                            attributes:@{NSForegroundColorAttributeName: color,
                                                         NSFontAttributeName: font,
@@ -41,7 +38,7 @@
                                                                                              NSFontAttributeName: font1}];
     
     if (string2.length) {
-        [aString appendAttributedString:[[NSAttributedString alloc] initWithString:[@"\n" stringByAppendingString:string2]
+        [aString appendAttributedString:[[NSAttributedString alloc] initWithString:string2
                                                                            attributes:@{NSForegroundColorAttributeName: color2,
                                                                                         NSFontAttributeName: font2}]];
     }
@@ -55,23 +52,21 @@
                                             string:(NSString *)string2
                                              color:(UIColor *)color2
                                               font:(UIFont *)font2
-                                         alignment:(NSTextAlignment)alignment {
-    NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
-    style.alignment = alignment;
-    
+                                             style:(NSParagraphStyle *)style {
     NSMutableAttributedString *aString = [[NSMutableAttributedString alloc] initWithString:string1
                                                                                 attributes:@{NSForegroundColorAttributeName: color1,
                                                                                              NSFontAttributeName: font1,
                                                                                              NSParagraphStyleAttributeName: style}];
     
     if (string2.length) {
-        [aString appendAttributedString:[[NSAttributedString alloc] initWithString:[@"\n" stringByAppendingString:string2]
-                                                                           attributes:@{NSForegroundColorAttributeName: color2,
-                                                                                        NSFontAttributeName: font2,
-                                                                                        NSParagraphStyleAttributeName: style}]];
+        [aString appendAttributedString:[[NSAttributedString alloc] initWithString:string2
+                                                                        attributes:@{NSForegroundColorAttributeName: color2,
+                                                                                     NSFontAttributeName: font2,
+                                                                                     NSParagraphStyleAttributeName: style}]];
     }
     
     return [aString copy];
 }
 
 @end
+

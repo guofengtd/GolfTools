@@ -20,6 +20,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)phoneNumberByTrimingMiscs;
 
+- (NSString *)md5;
+
+- (NSString *)sha256;
+
+@end
+
+@interface NSString (AliOSS)
+
+- (NSString *)aliOSSThumbnailWithSize:(int)size;
+
 @end
 
 NS_ASSUME_NONNULL_END

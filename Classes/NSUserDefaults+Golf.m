@@ -29,20 +29,10 @@
     [[self defaults] setObject:value?:@"" forKey:SPLASH_KEY];
 }
 
-#define TOKEN_KEY   @"token_key"
-
-+ (NSString *)token {
-    return [[self defaults] objectForKey:TOKEN_KEY];
-}
-
-+ (void)saveToken:(NSString *)token {
-    [[self defaults] setObject:token?:@"" forKey:TOKEN_KEY];
-}
-
 #define ACCOUNT_LOGIN_USERNAME_KEY  @"account.login.username.key"
 
 + (NSString *)username {
-    return [[self defaults] objectForKey:ACCOUNT_LOGIN_USERNAME_KEY]?:@"guofeng203";
+    return [[self defaults] objectForKey:ACCOUNT_LOGIN_USERNAME_KEY];
 }
 
 + (void)saveUsername:(NSString *)username {
@@ -58,6 +48,59 @@
 
 + (void)saveConversationTextMode:(BOOL)textMode {
     [[self defaults] setObject:@(textMode) forKey:CONVERSATION_TEXT_MODE_KEY];
+}
+
+#define MAIN_TAB_INDEX_KEY  @"main.tab.index.key"
+
++ (NSInteger)tabIndex {
+    NSNumber *num = [[self defaults] objectForKey:MAIN_TAB_INDEX_KEY];
+    return num?num.integerValue:0;
+}
+
++ (void)saveTabIndex:(NSInteger)tabIndex {
+    [[self defaults] setObject:@(tabIndex) forKey:MAIN_TAB_INDEX_KEY];
+}
+
+#define CALL_LAST_NUMBER    @"call.last.phone.number.key"
+
++ (NSString *)lastCallNumber {
+    return [[self defaults] objectForKey:CALL_LAST_NUMBER];
+}
+
++ (void)saveLastCallNumber:(NSString *)number {
+    [[self defaults] setObject:number?:@"" forKey:CALL_LAST_NUMBER];
+}
+
+#define CHAT_NOTIFICATION  @"chat.notification.key"
+
++ (BOOL)chatNotification {
+    NSNumber *num = [[self defaults] objectForKey:CHAT_NOTIFICATION];
+    return num?num.boolValue:FALSE;
+}
+
++ (void)saveChatNotification:(BOOL)notification {
+    [[self defaults] setObject:@(notification) forKey:CHAT_NOTIFICATION];
+}
+
+#define CHAT_AUTO_DOWNLOAD_KEY  @"chat.auto.download.key"
+
++ (BOOL)chatAutoDownload {
+    NSNumber *num = [[self defaults] objectForKey:CHAT_AUTO_DOWNLOAD_KEY];
+    return num?num.boolValue:FALSE;
+}
+
++ (void)saveChatAutoDownload:(BOOL)autoDownload {
+    [[self defaults] setObject:@(autoDownload) forKey:CHAT_AUTO_DOWNLOAD_KEY];
+}
+
+#define CHAT_BACKGROUND_IMAGE_KEY   @"chat.background.image.key"
+
++ (NSString *)chatBackgroundImage {
+    return [[self defaults] objectForKey:CHAT_BACKGROUND_IMAGE_KEY];
+}
+
++ (void)saveChatBackgroundImage:(NSString *)imageUrl {
+    [[self defaults] setObject:imageUrl?:@"" forKey:CHAT_BACKGROUND_IMAGE_KEY];
 }
 
 @end

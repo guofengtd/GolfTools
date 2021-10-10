@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSAttributedString *)attributedStringWithString:(NSString *)string
                                              color:(UIColor *)color
                                               font:(UIFont *)font
-                                         alignment:(NSTextAlignment)alignment;
+                                             style:(nullable NSParagraphStyle *)style;
 
 + (NSAttributedString *)attributedStringWithString:(NSString *)string1
                                              color:(UIColor *)color1
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
                                             string:(NSString *)string2
                                              color:(UIColor *)color2
                                               font:(UIFont *)font2
-                                         alignment:(NSTextAlignment)alignment;
+                                             style:(nullable NSParagraphStyle *)style;
 
 @end
 

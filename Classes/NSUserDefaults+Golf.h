@@ -14,14 +14,26 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)splashValue;
 + (void)saveSplashValue:(NSString *)value;
 
-+ (NSString *)token;
-+ (void)saveToken:(NSString *)token;
-
 + (NSString *)username;
 + (void)saveUsername:(NSString *)username;
 
 + (BOOL)conversationTextMode;
 + (void)saveConversationTextMode:(BOOL)textMode;
+
++ (NSInteger)tabIndex;
++ (void)saveTabIndex:(NSInteger)tabIndex;
+
++ (NSString *)lastCallNumber;
++ (void)saveLastCallNumber:(NSString *)number;
+
++ (BOOL)chatNotification;
++ (void)saveChatNotification:(BOOL)notification;
+
++ (BOOL)chatAutoDownload;
++ (void)saveChatAutoDownload:(BOOL)autoDownload;
+
++ (NSString *)chatBackgroundImage;
++ (void)saveChatBackgroundImage:(NSString *)imageUrl;
 
 @end
 

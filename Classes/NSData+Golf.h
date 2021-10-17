@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)md5;
 
+- (NSString *)stringSize;
+
 @end
 
 NS_ASSUME_NONNULL_END

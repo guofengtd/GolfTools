@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)sha256;
 
+- (NSString *)fileExt;
+
 @end
 
 @interface NSString (AliOSS)

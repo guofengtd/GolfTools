@@ -24,4 +24,16 @@
     return output;
 }
 
+- (NSString *)stringSize {
+    if (self.length > 1024 * 1024) {
+        return [NSString stringWithFormat:@"%.02f M", self.length / 1024. / 1024.];
+    }
+    else if (self.length > 1024) {
+        return [NSString stringWithFormat:@"%.02f K", self.length / 1024.];
+    }
+    else {
+        return [NSString stringWithFormat:@"%.0f Bytes", self.length];
+    }
+}
+
 @end

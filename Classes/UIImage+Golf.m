@@ -124,5 +124,13 @@
     return newImage;
 }
 
+- (UIImage *)resizedImageWithSize:(CGSize)size {
+    CGSize originalSize = self.size;
+    if (originalSize.width <= size.width && originalSize.height <= size.height) {
+        return self;
+    }
+    
+    return self;
+}
 
 @end

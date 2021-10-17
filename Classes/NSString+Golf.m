@@ -127,6 +127,16 @@
     return output;
 }
 
+- (NSString *)fileExt {
+    NSArray *aa = [self componentsSeparatedByString:@"."];
+    if (aa.count > 1) {
+        NSString *ext = [aa lastObject];
+        return [ext lowercaseString];
+    }
+    
+    return nil;
+}
+
 @end
 
 @implementation NSString (AliOSS)

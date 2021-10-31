@@ -32,9 +32,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)chatAutoDownload;
 + (void)saveChatAutoDownload:(BOOL)autoDownload;
 
-+ (NSString *)chatBackgroundImage;
-+ (void)saveChatBackgroundImage:(NSString *)imageUrl;
-
 @end
 
 NS_ASSUME_NONNULL_END

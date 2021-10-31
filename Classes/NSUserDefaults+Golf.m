@@ -93,14 +93,4 @@
     [[self defaults] setObject:@(autoDownload) forKey:CHAT_AUTO_DOWNLOAD_KEY];
 }
 
-#define CHAT_BACKGROUND_IMAGE_KEY   @"chat.background.image.key"
-
-+ (NSString *)chatBackgroundImage {
-    return [[self defaults] objectForKey:CHAT_BACKGROUND_IMAGE_KEY];
-}
-
-+ (void)saveChatBackgroundImage:(NSString *)imageUrl {
-    [[self defaults] setObject:imageUrl?:@"" forKey:CHAT_BACKGROUND_IMAGE_KEY];
-}
-
 @end

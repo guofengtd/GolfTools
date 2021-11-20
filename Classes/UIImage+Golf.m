@@ -7,6 +7,7 @@
 
 #import "UIImage+Golf.h"
 #import "NSAttributedString+Golf.h"
+#import <SDWebImage/UIImage+Transform.h>
 
 @implementation UIImage (Golf)
 
@@ -131,6 +132,31 @@
     }
     
     return self;
+}
+
+- (UIImage *)croppedImageWithRatio:(CGFloat)ratio {
+    CGSize size = self.size;
+    CGFloat ratioOriginal = size.width / size.height;
+    
+    if (ratioOriginal == ratio) {
+        return self;
+    }
+    
+    CGRect rect;
+    if (ratio > ratioOriginal) {
+        CGFloat width = size.width;
+        CGFloat height = width / ratio;
+        
+        rect = CGRectMake(0, (size.height - height) / 2., width, height);
+    }
+    else {
+        CGFloat height = size.height;
+        CGFloat width = height * ratio;
+        
+        rect = CGRectMake((size.width - width) / 2., 0, width, height);
+    }
+    
+    return [self sd_croppedImageWithRect:rect];
 }
 
 @end

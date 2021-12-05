@@ -36,6 +36,11 @@ NS_ASSUME_NONNULL_BEGIN
                                               font:(UIFont *)font2
                                              style:(nullable NSParagraphStyle *)style;
 
++ (NSAttributedString *)attributedStringWithString:(NSString *)string
+                                        searchText:(NSString *)searchText
+                                             color:(UIColor *)color
+                                          fontSize:(CGFloat)fontSize;
+
 @end
 
 NS_ASSUME_NONNULL_END

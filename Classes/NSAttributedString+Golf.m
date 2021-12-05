@@ -68,5 +68,32 @@
     return [aString copy];
 }
 
++ (NSAttributedString *)attributedStringWithString:(NSString *)string
+                                        searchText:(NSString *)searchText
+                                             color:(UIColor *)color
+                                          fontSize:(CGFloat)fontSize {
+    NSMutableAttributedString *aString = [[NSMutableAttributedString alloc] initWithString:string
+                                                                                attributes:@{NSForegroundColorAttributeName: color,
+                                                                                             NSFontAttributeName: [UIFont systemFontOfSize:fontSize]}];
+    
+    NSUInteger location = 0;
+    while (location < string.length) {
+        NSRange range = [string rangeOfString:searchText?:@""
+                                      options:NSCaseInsensitiveSearch
+                                        range:NSMakeRange(location, string.length - location)];
+        if (range.length == 0) {
+            break;
+        }
+        
+        [aString addAttributes:@{NSForegroundColorAttributeName: color,
+                                 NSFontAttributeName: [UIFont boldSystemFontOfSize:fontSize]}
+                         range:range];
+        
+        location += range.length;
+    }
+    
+    return [aString copy];
+}
+
 @end
 

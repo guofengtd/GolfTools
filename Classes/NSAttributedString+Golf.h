@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
                                              style:(nullable NSParagraphStyle *)style;
 
 + (NSAttributedString *)attributedStringWithString:(NSString *)string
-                                        searchText:(NSString *)searchText
+                                        searchText:(nullable NSString *)searchText
                                              color:(UIColor *)color
                                           fontSize:(CGFloat)fontSize;
 

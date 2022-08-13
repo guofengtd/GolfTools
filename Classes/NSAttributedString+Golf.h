@@ -24,14 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSAttributedString *)attributedStringWithString:(NSString *)string1
                                              color:(UIColor *)color1
                                               font:(UIFont *)font1
-                                            string:(NSString *)string2
+                                            string:(nullable NSString *)string2
                                              color:(UIColor *)color2
                                               font:(UIFont *)font2;
 
 + (NSAttributedString *)attributedStringWithString:(NSString *)string1
                                              color:(UIColor *)color1
                                               font:(UIFont *)font1
-                                            string:(NSString *)string2
+                                            string:(nullable NSString *)string2
                                              color:(UIColor *)color2
                                               font:(UIFont *)font2
                                              style:(nullable NSParagraphStyle *)style;

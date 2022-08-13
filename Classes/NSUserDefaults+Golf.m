@@ -93,4 +93,24 @@
     [[self defaults] setObject:@(autoDownload) forKey:CHAT_AUTO_DOWNLOAD_KEY];
 }
 
+#define DEVICE_TOKEN_KEY  @"device.token.key"
+
++ (NSString *)deviceToken {
+    return [[self defaults] objectForKey:DEVICE_TOKEN_KEY];
+}
+
++ (void)saveDeviceToken:(NSString *)token {
+    [[self defaults] setObject:token?:@"" forKey:DEVICE_TOKEN_KEY];
+}
+
+#define DEVICE_VOIP_TOKEN_KEY  @"device.voip.token.key"
+
++ (NSString *)voipToken {
+    return [[self defaults] objectForKey:DEVICE_VOIP_TOKEN_KEY];
+}
+
++ (void)saveVoipToken:(NSString *)token {
+    [[self defaults] setObject:token?:@"" forKey:DEVICE_VOIP_TOKEN_KEY];
+}
+
 @end

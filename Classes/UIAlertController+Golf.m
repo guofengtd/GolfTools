@@ -40,6 +40,34 @@
               cancelAction:(void (^)(UIAlertAction * _Nonnull))cancelAction
             viewController:(UIViewController *)viewController
            completionBlock:(void (^)(void))completionBlock {
+    [self showAlertWithTitle:title
+                     message:message
+                       style:style
+               barButtonItem:nil
+                  sourceView:nil
+                  sourceRect:CGRectZero
+                     okTitle:okTitle
+                     okStyle:okStyle
+                    okAction:okAction
+                 cancelTitle:cancelTitle
+                cancelAction:cancelAction
+              viewController:viewController
+             completionBlock:completionBlock];
+}
+
++ (void)showAlertWithTitle:(nullable NSString *)title
+                   message:(nullable NSString *)message
+                     style:(UIAlertControllerStyle)style
+             barButtonItem:(UIBarButtonItem *)item
+                sourceView:(UIView *)view
+                sourceRect:(CGRect)rect
+                   okTitle:(nullable NSString *)okTitle
+                   okStyle:(UIAlertActionStyle)okStyle
+                  okAction:(void (^ __nullable)(UIAlertAction *action))okAction
+               cancelTitle:(nullable NSString *)cancelTitle
+              cancelAction:(void (^ __nullable)(UIAlertAction *action))cancelAction
+            viewController:(UIViewController *)viewController
+           completionBlock:(void (^ __nullable)(void))completionBlock {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
                                                                    message:message
                                                             preferredStyle:style];
@@ -59,6 +87,10 @@
         
         [alert addAction:cancel];
     }
+    
+    alert.popoverPresentationController.barButtonItem = item;
+    alert.popoverPresentationController.sourceView = view;
+    alert.popoverPresentationController.sourceRect = rect;
     
     [viewController presentViewController:alert
                                  animated:YES

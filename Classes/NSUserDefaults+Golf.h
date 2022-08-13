@@ -32,6 +32,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)chatAutoDownload;
 + (void)saveChatAutoDownload:(BOOL)autoDownload;
 
++ (NSString *)deviceToken;
++ (void)saveDeviceToken:(NSString *)token;
+
++ (NSString *)voipToken;
++ (void)saveVoipToken:(NSString *)token;
+
 @end
 
 NS_ASSUME_NONNULL_END

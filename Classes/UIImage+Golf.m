@@ -125,15 +125,6 @@
     return newImage;
 }
 
-- (UIImage *)resizedImageWithSize:(CGSize)size {
-    CGSize originalSize = self.size;
-    if (originalSize.width <= size.width && originalSize.height <= size.height) {
-        return self;
-    }
-    
-    return self;
-}
-
 - (UIImage *)croppedImageWithRatio:(CGFloat)ratio {
     CGSize size = self.size;
     CGFloat ratioOriginal = size.width / size.height;

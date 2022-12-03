@@ -113,4 +113,15 @@
     [[self defaults] setObject:token?:@"" forKey:DEVICE_VOIP_TOKEN_KEY];
 }
 
+#define UGCEULA_KEY @"UGCEULA.44key"
+
++ (BOOL)showUGCEULA {
+    NSNumber *num = [[self defaults] objectForKey:UGCEULA_KEY];
+    return num?num.boolValue:TRUE;
+}
+
++ (void)acceptUGCEULA {
+    [[self defaults] setObject:@(FALSE) forKey:UGCEULA_KEY];
+}
+
 @end

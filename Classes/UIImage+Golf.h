@@ -30,8 +30,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIImage *)imageMaskedWithColor:(UIColor *)color;
 
-- (UIImage *)resizedImageWithSize:(CGSize)size;
-
 - (UIImage *)croppedImageWithRatio:(CGFloat)ratio;
 
 @end

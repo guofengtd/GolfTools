@@ -38,6 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)voipToken;
 + (void)saveVoipToken:(NSString *)token;
 
++ (BOOL)showUGCEULA;
++ (void)acceptUGCEULA;
+
 @end
 
 NS_ASSUME_NONNULL_END
